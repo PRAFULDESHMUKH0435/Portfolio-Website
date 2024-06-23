@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback_style.css') }}">
+</head>
+<body>
+    <div class="fb-form">
+        <form action="/savefeedBackData" class="form-group" method="post">
+            <h2>Feedback Form</h2>
+            <input type="text" class="form-control" placeholder="Name" id="name" name="name">
+            <input type="text" class="form-control" placeholder="Designation" name="designation" style="margin-bottom:30px;">
+            <textarea id="fb-comment" name="comment" class="form-control" placeholder="Tell us what you think"></textarea>
+            <div class="rating" id="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            <input type="hidden" id="rating-value" name="rating-val" value="0">
+            <input type="submit" class="form-control btn btn-primary" style="width:100px;">
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='feedback_script.js') }}"></script>
+</body>
+</html>

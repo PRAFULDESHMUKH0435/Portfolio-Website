@@ -1,0 +1,154 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(234, 228, 228);
+    overflow: hidden;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+/* Base styles for form container */
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px; /* Default width for desktop */
+    gap: 1px;
+    padding: 10px 50px 10px;
+    border: black solid;
+    background-color: #334;
+}
+
+/* Base styles for form controls */
+.form-control{
+    width: 100%;
+    padding: 10px 10px 10px;
+}
+
+/* Base styles for feedback form */
+.fb-form {
+    width: 400px; /* Default width for desktop */
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/* Base styles for form headings */
+.fb-form h2 {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+/* Base styles for form inputs */
+.fb-form input {
+    margin: 15px 0;
+}
+
+/* Base styles for form submit button */
+.fb-form input[type="submit"] {
+    margin-top: 0;
+}
+
+/* Base styles for form textarea */
+.fb-form textarea {
+    height: 100px;
+}
+
+/* Base styles for star rating container */
+.rating {
+    margin: 15px auto;
+    transform: rotateX(0deg);
+    width: 100%;
+}
+
+/* Base styles for individual stars */
+.rating .fa-star {
+    font-size: 2em;
+    cursor: pointer;
+    margin: 0 5.1%;
+}
+
+/* Base styles for active and hover states of stars */
+.rating .fa-star.active-rating,
+.rating .fa-star:hover,
+.rating .fa-star:hover .fa-star {
+    color: yellow;
+}
+
+/* Keyframes animation for rating highlight */
+@keyframes rating-highlight {
+    0% {
+        transform: rotate(-10deg) scale(1.2);
+    }
+    20% {
+        transform: rotate(10deg) scale(.8);
+    }
+    50% {
+        transform: rotate(-5deg) scale(1.1);
+    }
+    80% {
+        transform: rotate(5deg) scale(.9);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%; /* Use percentage width for responsiveness */
+        max-width: 400px; /* Limit maximum width */
+        gap: 1px;
+        padding: 10px;
+        border: black solid;
+        background-color: #334;
+    }
+    
+    /* Base styles for form controls */
+    .form-control{
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+    
+    /* Base styles for feedback form */
+    .fb-form {
+        width: 100%; /* Use percentage width for responsiveness */
+        max-width: 300px; /* Limit maximum width */
+        margin: 0 auto; /* Center horizontally */
+        position: relative;
+        text-align: center; /* Center text */
+        top: 50%;
+        left: 40%;
+    }
+    
+    /* Base styles for form headings */
+    .fb-form h2 {
+        font-size: 1.4em;
+    }
+
+    .rating {
+        margin: 15px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* Base styles for individual stars */
+    .rating .fa-star {
+        font-size: 2em;
+        cursor: pointer;
+        margin: 0 5px; /* Adjust margin for responsiveness */
+    }
+ 
+
+}
